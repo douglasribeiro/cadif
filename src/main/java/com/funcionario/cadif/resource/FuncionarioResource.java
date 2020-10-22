@@ -43,7 +43,6 @@ public class FuncionarioResource {
 		return ResponseEntity.ok().body(obj);
 	}
 	
-	
 	@RequestMapping(method=RequestMethod.POST)
 	public ResponseEntity<Void> insert(@Valid @RequestBody Funcionario obj) {
 		obj = funcionarioService.insert(obj);
@@ -51,7 +50,7 @@ public class FuncionarioResource {
 				.path("/{id}").buildAndExpand(obj.getFuncionarioId()).toUri();
 		return ResponseEntity.created(uri).build();
 	}
-	
+		
 	@RequestMapping(value="/{id}", method=RequestMethod.PUT)
 	public ResponseEntity<Void> update(@Valid @RequestBody Funcionario funcionario, @PathVariable Integer id) {
 		funcionario.setFuncionarioId(id);

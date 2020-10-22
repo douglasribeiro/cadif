@@ -46,12 +46,14 @@ public class FuncionarioService {
 		}
 	}
 	
+	@Transactional
 	public Funcionario update(Funcionario obj) {
 		Funcionario newObj = find(obj.getFuncionarioId());
 		updateData(newObj, obj);
 		return funcionarioRepository.save(newObj);
 	}
 	
+	@Transactional
 	public void delete(int id) {
 		find(id);
 		try {
