@@ -9,5 +9,10 @@ public interface CargoRepository extends JpaRepository<Cargo, Integer> {
 
 	@Transactional(readOnly=true)
 	Cargo findByCargoNome(String nome);
-	
+
+
+
+
+
+
 }
