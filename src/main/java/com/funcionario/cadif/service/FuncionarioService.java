@@ -74,4 +74,6 @@ public class FuncionarioService {
 		List<Funcionario> result = funcionarioRepository.findByDepto(departamento); 
 		return result;
 	}
+	
+	//alterado
 }
